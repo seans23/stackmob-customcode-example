@@ -93,20 +93,21 @@ public class SendGrid implements CustomCodeMethod {
     
     JSONParser parser = new JSONParser();
     try {
-        Object obj = parser.parse(request.getBody());
-        JSONObject jsonObject = (JSONObject) obj;
-        //We use the username passed to query the StackMob datastore
-        //and retrieve the user's name and email address
-        username = (String) jsonObject.get("username");
+      Object obj = parser.parse(request.getBody());
+      JSONObject jsonObject = (JSONObject) obj;
 
-        // The following values could be static or dynamic
-        subject = (String) jsonObject.get("subject");
-        text = (String) jsonObject.get("text");
-        from = (String) jsonObject.get("from");
+      //We use the username passed to query the StackMob datastore
+      //and retrieve the user's name and email address
+      username = (String) jsonObject.get("username");
+
+      // The following values could be static or dynamic
+      subject = (String) jsonObject.get("subject");
+      text = (String) jsonObject.get("text");
+      from = (String) jsonObject.get("from");
     } catch (ParseException e) {
-        logger.error(e.getMessage(), e);
-        responseCode = -1;
-        responseBody = e.getMessage();
+      logger.error(e.getMessage(), e);
+      responseCode = -1;
+      responseBody = e.getMessage();
     }
 	
     if (username == null || username.isEmpty()) {
