@@ -46,8 +46,8 @@ public class TwilioSMS implements CustomCodeMethod {
 
   //Create your Twilio Acct at twilio.com and enter 
   //Your accountsid and accesstoken below.
-  static String accountsid = "ACda54cd4d640564dc517b7001bb8934a8";
-  static String accesstoken = "49dcd6ce57c0a6fdfbad23093136b960";
+  static String accountsid = "YOUR_ACCOUNTSID";
+  static String accesstoken = "YOUR_ACCESSTOKEN";
     
   @Override
   public String getMethodName() {
