@@ -48,6 +48,12 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.ArrayList;
 
+// Added JSON parsing to handle JSON posted in the body
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
+
 public class SendGrid implements CustomCodeMethod {
 
   //Create your SendGrid Acct at sendgrid.com
@@ -70,6 +76,7 @@ public class SendGrid implements CustomCodeMethod {
   public ResponseToProcess execute(ProcessedAPIRequest request, SDKServiceProvider serviceProvider) {
     int responseCode = 0;
     String responseBody = "";
+    String username = "";
     String body = "";
     String url = "";
     String to = "";
@@ -78,10 +85,23 @@ public class SendGrid implements CustomCodeMethod {
     String api_key = API_KEY;
     
     LoggerService logger = serviceProvider.getLoggerService(SendGrid.class);
-     
-    // username should be a valid username in the StackMob user schema
-    String username = request.getParams().get("username");
-	  
+        
+    //Log the JSON object passed to the StackMob Logs
+    logger.debug(request.getBody());
+    
+    JSONParser parser = new JSONParser();
+    
+    try {
+    	 
+		Object obj = parser.parse(request.getBody());
+		JSONObject jsonObject = (JSONObject) obj;
+ 
+		username = (String) jsonObject.get("username");
+		
+	} catch (ParseException e) {
+		e.printStackTrace();
+	}
+	
     if (username == null || username.isEmpty()) {
       HashMap<String, String> errParams = new HashMap<String, String>();
       errParams.put("error", "the username passed was empty or null");
@@ -199,7 +219,6 @@ public class SendGrid implements CustomCodeMethod {
       
     Map<String, Object> map = new HashMap<String, Object>();
     map.put("response_body", responseBody);
-    map.put("encodedURL", url);
      
     return new ResponseToProcess(responseCode, map);
   }
