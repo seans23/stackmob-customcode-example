@@ -74,7 +74,7 @@
               <goal>single</goal>
             </goals>
             <configuration>
-              <finalName>${project.artifactId}-${project.version}-Assembled</finalName>
+              <finalName>assembed-${project.version}</finalName>
               <appendAssemblyId>true</appendAssemblyId>
               <filters>
                 <filter>src/main/filters/${env}/${build.env}/filter-common.properties</filter>

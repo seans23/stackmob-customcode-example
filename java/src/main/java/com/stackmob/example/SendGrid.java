@@ -77,10 +77,15 @@ public class SendGrid implements CustomCodeMethod {
     int responseCode = 0;
     String responseBody = "";
     String username = "";
-    String body = "";
-    String url = "";
+    String subject = "";
+    String text = "";
+    String from = "";
     String to = "";
     String toname = "";
+      
+    String body = "";
+    String url = "";    
+    
     String api_user = API_USER;
     String api_key = API_KEY;
     
@@ -95,8 +100,15 @@ public class SendGrid implements CustomCodeMethod {
     	 
 		Object obj = parser.parse(request.getBody());
 		JSONObject jsonObject = (JSONObject) obj;
- 
+        
+        //We use the username passed to query the StackMob datastore
+        //and retrieve the user's name and email address
 		username = (String) jsonObject.get("username");
+		
+	    // The following values could be static or dynamic
+		subject = (String) jsonObject.get("subject");
+		text = (String) jsonObject.get("text");
+		from = (String) jsonObject.get("from");
 		
 	} catch (ParseException e) {
 		e.printStackTrace();
@@ -149,17 +161,6 @@ public class SendGrid implements CustomCodeMethod {
       return new ResponseToProcess(HttpURLConnection.HTTP_INTERNAL_ERROR, errMap); // http 500 - internal server error
     }
     
-    // The following values could be static or dynamic 
-    // and could be populated with values from the StackMob datastore
-    //  SUBJECT - subject line for the email
-    String subject = request.getParams().get("subject");
- 
-    // TEXT - the text of the email
-    String text = request.getParams().get("text");
-       
-    // FROM - the text of the email
-    String from = request.getParams().get("from");
-   
     if (subject == null || subject.equals("")) {
       logger.error("Subject is missing");
     }
