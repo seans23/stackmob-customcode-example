@@ -124,7 +124,6 @@ public class SendGrid implements CustomCodeMethod {
     query.add(new SMEquals("username", new SMString(username)));
 
     SMObject userObject;
-    
     List<SMObject> result;
     try {
       // return results from user query
