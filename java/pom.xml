@@ -82,14 +82,14 @@
           </execution>
         </executions>
         <configuration>
-            <descriptorRefs>
-                <descriptorRef>jar-with-dependencies</descriptorRef>
-            </descriptorRefs>
-            <archive>
-                <manifest>
-                    <mainClass>com.stackmob.example.EntryPointExtender</mainClass>
-                </manifest>
-            </archive>
+          <descriptorRefs>
+            <descriptorRef>jar-with-dependencies</descriptorRef>
+          </descriptorRefs>
+          <archive>
+            <manifest>
+              <mainClass>com.stackmob.example.EntryPointExtender</mainClass>
+            </manifest>
+          </archive>
         </configuration>
       </plugin>
       <plugin>
