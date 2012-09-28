@@ -54,88 +54,93 @@ public class TwilioSMS implements CustomCodeMethod {
     return "twilio_sms";
   }
     
+    
   @Override
   public List<String> getParams() {
     return Arrays.asList("tophonenumber","message");
-  } 
+  }  
+    
 
   @Override
   public ResponseToProcess execute(ProcessedAPIRequest request, SDKServiceProvider serviceProvider) {
+	  
+	  LoggerService logger = serviceProvider.getLoggerService(TwilioSMS.class);
+      
+      // TO phonenumber should be YOUR cel phone
+      String toPhoneNumber = request.getParams().get("tophonenumber");
+      
+      //  FROM phonenumber should be one create in the twilio dashboard at twilio.com
+      String fromPhoneNumber = "9259488599";
+      
+      //  text message you want to send
+      String message = request.getParams().get("message");
+      
+      
+      if (toPhoneNumber == null || toPhoneNumber.equals("")) {
+          logger.error("Missing phone number");
+      }
+      
+      if (message == null || message.equals("")) {
+          logger.error("Missing message");
+      }
 
-    LoggerService logger = serviceProvider.getLoggerService(TwilioSMS.class);
       
-    // TO phonenumber should be YOUR cell phone
-    String toPhoneNumber = request.getParams().get("tophonenumber");
-      
-    //  FROM phonenumber should be one create in the Twilio dashboard at twilio.com
-    String fromPhoneNumber = "YOUR_TWILIO_NUMBER";
-      
-    //  text message you want to send
-    String message = request.getParams().get("message");
-      
-    if (toPhoneNumber == null || toPhoneNumber.isEmpty()) {
-      logger.error("Missing to phone number");
-    }
-      
-    if (message == null || message.isEmpty()) {
-      logger.error("Missing message");
-    }
-      
-    String body = "To=" + toPhoneNumber + "&From=" + fromPhoneNumber + "&Body=" + message;
+      String body = "To=" + toPhoneNumber + "&From=" + fromPhoneNumber + "&Body=" + message;
 
-    int responseCode = 0;
-    String responseBody = "";
+      int responseCode = 0;
+      String responseBody = "";
       
-    String url = "https://api.twilio.com/2010-04-01/Accounts/" + accountsid + "/SMS/Messages.json";
+      String url = "https://api.twilio.com/2010-04-01/Accounts/" + accountsid + "/SMS/Messages.json";
     
-    String pair = accountsid + ":" + accesstoken;
+      String pair = accountsid + ":" + accesstoken;
       
-    // Base 64 Encode the accountsid/accesstoken
-    byte[] b =Base64.encodeBase64(pair.getBytes()); 
-    String encodedString = new String(b);
+      // Base 64 Encode the accountsid/accesstoken
+      byte[] b =Base64.encodeBase64(pair.getBytes()); 
+      String encodedString = new String(b);
     
-    Header accept = new Header("Accept-Charset", "utf-8");
-    Header auth = new Header("Authorization","Basic " + encodedString);
-    Header content = new Header("Content-Type", "application/x-www-form-urlencoded");
+      Header accept = new Header("Accept-Charset", "utf-8");
+      Header auth = new Header("Authorization","Basic " + encodedString);
+      Header content = new Header("Content-Type", "application/x-www-form-urlencoded");
 
-    Set<Header> set = new HashSet();
-    set.add(accept);
-    set.add(content);
-    set.add(auth);
+      Set<Header> set = new HashSet();
+      set.add(accept);
+      set.add(content);
+      set.add(auth);
       
-    try {  
-      HttpService http = serviceProvider.getHttpService();
+      try {  
+          HttpService http = serviceProvider.getHttpService();
           
-      PostRequest req = new PostRequest(url,set,body);
+          PostRequest req = new PostRequest(url,set,body);
              
-      HttpResponse resp = http.post(req);
-      responseCode = resp.getCode();
-      responseBody = resp.getBody();
+          HttpResponse resp = http.post(req);
+          responseCode = resp.getCode();
+          responseBody = resp.getBody();
                   
-    } catch(TimeoutException e) {
-      logger.error(e.getMessage(), e);
-      responseCode = -1;
-      responseBody = e.getMessage();
+      } catch(TimeoutException e) {
+          logger.error(e.getMessage(), e);
+          responseCode = -1;
+          responseBody = e.getMessage();
                  
-    } catch(AccessDeniedException e) {
-      logger.error(e.getMessage(), e);
-      responseCode = -1;
-      responseBody = e.getMessage();
+      } catch(AccessDeniedException e) {
+          logger.error(e.getMessage(), e);
+          responseCode = -1;
+          responseBody = e.getMessage();
               
-    } catch(MalformedURLException e) {
-      logger.error(e.getMessage(), e);
-      responseCode = -1;
-      responseBody = e.getMessage();
+      } catch(MalformedURLException e) {
+          logger.error(e.getMessage(), e);
+          responseCode = -1;
+          responseBody = e.getMessage();
            
-    } catch(ServiceNotActivatedException e) {
-      logger.error(e.getMessage(), e);
-      responseCode = -1;
-      responseBody = e.getMessage();
-    }
+      } catch(ServiceNotActivatedException e) {
+    	  logger.error(e.getMessage(), e);
+          responseCode = -1;
+          responseBody = e.getMessage();
+      }
       
-    Map<String, Object> map = new HashMap<String, Object>();
-    map.put("response_body", responseBody);
+      Map<String, Object> map = new HashMap<String, Object>();
+      map.put("response_body", responseBody);
      
     return new ResponseToProcess(responseCode, map);
   }
+
 }
