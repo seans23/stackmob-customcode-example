@@ -62,7 +62,6 @@
           <target>1.6</target>
         </configuration>
       </plugin>
-        
       <plugin>
         <artifactId>maven-assembly-plugin</artifactId>
         <version>2.2</version>
@@ -81,19 +80,18 @@
               </descriptors>
             </configuration>
           </execution>
-        </executions>          
-		<configuration>
-		  <descriptorRefs>
-		    <descriptorRef>jar-with-dependencies</descriptorRef>
-		  </descriptorRefs>
-		  <archive>
-            <manifest>
-              <mainClass>com.stackmob.example.EntryPointExtender</mainClass>
-            </manifest>
-          </archive>
-	    </configuration>
+        </executions>
+        <configuration>
+            <descriptorRefs>
+                <descriptorRef>jar-with-dependencies</descriptorRef>
+            </descriptorRefs>
+            <archive>
+                <manifest>
+                    <mainClass>com.stackmob.example.EntryPointExtender</mainClass>
+                </manifest>
+            </archive>
+        </configuration>
       </plugin>
-        
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-jar-plugin</artifactId>
