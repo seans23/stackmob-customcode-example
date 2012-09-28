@@ -74,7 +74,7 @@
               <goal>single</goal>
             </goals>
             <configuration>
-              <finalName>assembed-${project.version}</finalName>
+              <finalName>${project.artifactId}-${project.version}</finalName>
               <appendAssemblyId>true</appendAssemblyId>
               <descriptors>
                 <descriptor>src/main/assembly/distribution.xml</descriptor>

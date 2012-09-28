@@ -59,7 +59,7 @@ public class SendGrid implements CustomCodeMethod {
   //Create your SendGrid Acct at sendgrid.com
   static String API_USER = "YOUR_SENDGRID_USERNAME";
   static String API_KEY = "YOUR_SENDGRID_PASSWORD";
-	
+
   @Override
   public String getMethodName() {
     return "sendgrid_email";
