@@ -68,7 +68,7 @@ public class SendGrid implements CustomCodeMethod {
     
   @Override
   public List<String> getParams() {
-    return Arrays.asList("username","subject","text","from");
+    return Arrays.asList();
   }  
     
 
