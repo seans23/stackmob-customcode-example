@@ -65,3 +65,4 @@ Building:
 3. JAR is located in java/target
 4. [Upload JAR to StackMob](https://www.stackmob.com/platform/api/customcode/upload)
 
+or you know... github integration thingie
