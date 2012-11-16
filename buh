@@ -1,0 +1,328 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+
+  <head>
+        <title>HipChat - Emoticons</title>
+        <meta name="title" content="HipChat - Emoticons">
+    <meta name="description" content="HipChat is hosted group chat and IM for companies and teams. Supercharge real-time collaboration with persistent chat rooms, file sharing, and chat history.">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="image_src" href="https://www.hipchat.com/img/image_src.png">
+
+    <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="HipChat" />
+
+    <link rel="stylesheet" type="text/css" href="/min/?b=css&f=default.css,form.css,layout.css,jquery-ui.css,groups.css,layout_tabbed.css&15f84ce60">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+
+    <!--
+
+      Hey there! Trying to reverse engineer something?
+      Why not join our team instead?
+
+      Apply at https://www.hipchat.com/jobs and mention this comment. :)
+
+    -->
+  </head>
+
+  <body class="layout_tabbed">
+    <div id="page">
+                  <div id="admin_header">
+        <div class="content">
+          <ul class="tabs">
+            <li class=""><a href="/home" class="account"><span>My account</span></a></li><li class=" selected"><a href="/admin" class="admin"><span>Group admin</span></a></li>
+          </ul>
+        </div>
+      </div>
+            <div id="header">
+        <div class="content">
+          <p class="links">
+            sean@stackmob.com
+                        <span>|</span>
+            <a href="/account">Account settings</a>
+                        <span>|</span>
+            <a href="/help">Help</a>
+            <span>|</span>
+            <a href="/sign_out">Sign out</a>
+          </p>
+          <a href="/home"><img src="/img/logo2.png" alt="HipChat" width="115" height="58"></a>
+        </div>
+      </div>
+
+
+<div id="main">
+    <div id="tabs">
+    <div class="content">
+      <ul>
+                <li><a href="/admin/index"><span>&nbsp;</span>Group info</a></li><li><a href="/admin/users"><span>&nbsp;</span>Users</a></li><li><a href="/admin/billing"><span>&nbsp;</span>Billing</a></li><li><a href="/admin/features"><span>&nbsp;</span>Features</a></li><li><a href="/admin/api"><span>&nbsp;</span>API</a></li><li><a href="/admin/export"><span>&nbsp;</span>Data export</a></li><li class="selected"><a href="/admin/emoticons"><span>&nbsp;</span>Emoticons</a></li>      </ul>
+    </div>
+  </div>
+    
+  <div class="content">
+        
+    <div class="contentBox">
+            
+      <h1>Emoticons</h1>
+
+
+<div class="inner_box_top">
+  <h3 class="inner_box_header">Add new emoticon</h3>
+  <form action="https://stackmob.hipchat.com/admin/emoticons" method="post" style="display: inline-block;" enctype="multipart/form-data">  <input type="hidden" name="xsrf_token" value="c96900e58cd7df4a836948075dfd20a5cf2b8dd8"  />
+  <input type="hidden" name="action" value="add"  />
+  <table class="form" cellspacing="0">
+    <tr><td class="label"><label for="shortcut">Shortcut text</label></td><td><input type="text" id="shortcut" name="shortcut" value="" size="25" maxlength="20" /></td></tr>    <tr><td class="label"><label for="image">Image file</label></td><td><input type="file" id="Filedata" name="Filedata" value="" class="nofocus" /></td></tr>    <tr><td class="label"><label for="submit_emoticon"></label></td><td><input type="submit" id="submit_emoticon" name="submit_emoticon" value="Add emoticon"  /></td></tr>  </table>
+  </form>
+</div>
+<div class="inner_box_bottom">
+  <p class="subtext">Images must be under 100Kb and have max dimensions of 25px-tall and 30px-wide. Use a transparent PNG for best results. Animated gifs are reluctantly supported.</p>
+</div>
+
+<h1 class="tableHeader" style="margin: 20px 0 5px 0;">Current emoticons</h1>
+  <table cellspacing="0" class="barHeader">
+    <tr>
+      <th class="first" style="width: 1%;">Image</th>
+      <th>Shortcut</th>
+      <th>Uploaded By</th>
+      <th class="last" style="width: 1%;">&nbsp;</th>
+    </tr>
+      <tr>
+      <td style="vertical-align: middle;"><img src="https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/11115/stackmob.png" width="109" height="20" /></td>
+      <td style="vertical-align: middle;">(stackmob)</td>
+      <td style="vertical-align: middle;">Pete Curley</td>
+      <td style="vertical-align: middle;">
+        <form action="https://stackmob.hipchat.com/admin/emoticons" method="post" style="display: inline;" onsubmit="return confirm('Are you sure you want to delete this emoticon? It will remain visible for users until their client is restarted.');"><input type="hidden" name="xsrf_token" value="c96900e58cd7df4a836948075dfd20a5cf2b8dd8"  /><input type="hidden" name="action" value="delete"><input type="hidden" name="id" value="286"><input type="submit" id="go" name="go" value="Delete" class="warning" /></form>      </td>
+    </tr>
+      <tr>
+      <td style="vertical-align: middle;"><img src="https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/11115/joyent-1338826710.gif" width="30" height="9" /></td>
+      <td style="vertical-align: middle;">(joyent)</td>
+      <td style="vertical-align: middle;">Jay Aras</td>
+      <td style="vertical-align: middle;">
+        <form action="https://stackmob.hipchat.com/admin/emoticons" method="post" style="display: inline;" onsubmit="return confirm('Are you sure you want to delete this emoticon? It will remain visible for users until their client is restarted.');"><input type="hidden" name="xsrf_token" value="c96900e58cd7df4a836948075dfd20a5cf2b8dd8"  /><input type="hidden" name="action" value="delete"><input type="hidden" name="id" value="2593"><input type="submit" id="go" name="go" value="Delete" class="warning" /></form>      </td>
+    </tr>
+      <tr>
+      <td style="vertical-align: middle;"><img src="https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/11115/honeybadger-1338854319.jpg" width="30" height="24" /></td>
+      <td style="vertical-align: middle;">(honeybadger)</td>
+      <td style="vertical-align: middle;">Ty Amell</td>
+      <td style="vertical-align: middle;">
+        <form action="https://stackmob.hipchat.com/admin/emoticons" method="post" style="display: inline;" onsubmit="return confirm('Are you sure you want to delete this emoticon? It will remain visible for users until their client is restarted.');"><input type="hidden" name="xsrf_token" value="c96900e58cd7df4a836948075dfd20a5cf2b8dd8"  /><input type="hidden" name="action" value="delete"><input type="hidden" name="id" value="2714"><input type="submit" id="go" name="go" value="Delete" class="warning" /></form>      </td>
+    </tr>
+      <tr>
+      <td style="vertical-align: middle;"><img src="https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/11115/makeitso-1338856192.gif" width="30" height="25" /></td>
+      <td style="vertical-align: middle;">(makeitso)</td>
+      <td style="vertical-align: middle;">Jay Aras</td>
+      <td style="vertical-align: middle;">
+        <form action="https://stackmob.hipchat.com/admin/emoticons" method="post" style="display: inline;" onsubmit="return confirm('Are you sure you want to delete this emoticon? It will remain visible for users until their client is restarted.');"><input type="hidden" name="xsrf_token" value="c96900e58cd7df4a836948075dfd20a5cf2b8dd8"  /><input type="hidden" name="action" value="delete"><input type="hidden" name="id" value="2717"><input type="submit" id="go" name="go" value="Delete" class="warning" /></form>      </td>
+    </tr>
+      <tr>
+      <td style="vertical-align: middle;"><img src="https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/11115/herc-1343411418.JPG" width="23" height="25" /></td>
+      <td style="vertical-align: middle;">(herc)</td>
+      <td style="vertical-align: middle;">Sean Smith</td>
+      <td style="vertical-align: middle;">
+        <form action="https://stackmob.hipchat.com/admin/emoticons" method="post" style="display: inline;" onsubmit="return confirm('Are you sure you want to delete this emoticon? It will remain visible for users until their client is restarted.');"><input type="hidden" name="xsrf_token" value="c96900e58cd7df4a836948075dfd20a5cf2b8dd8"  /><input type="hidden" name="action" value="delete"><input type="hidden" name="id" value="5928"><input type="submit" id="go" name="go" value="Delete" class="warning" /></form>      </td>
+    </tr>
+      <tr>
+      <td style="vertical-align: middle;"><img src="https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/11115/nola-1344988699.jpg" width="18" height="25" /></td>
+      <td style="vertical-align: middle;">(nola)</td>
+      <td style="vertical-align: middle;">Sean Smith</td>
+      <td style="vertical-align: middle;">
+        <form action="https://stackmob.hipchat.com/admin/emoticons" method="post" style="display: inline;" onsubmit="return confirm('Are you sure you want to delete this emoticon? It will remain visible for users until their client is restarted.');"><input type="hidden" name="xsrf_token" value="c96900e58cd7df4a836948075dfd20a5cf2b8dd8"  /><input type="hidden" name="action" value="delete"><input type="hidden" name="id" value="6770"><input type="submit" id="go" name="go" value="Delete" class="warning" /></form>      </td>
+    </tr>
+      <tr>
+      <td style="vertical-align: middle;"><img src="https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/11115/bodie-1344989424.jpg" width="19" height="25" /></td>
+      <td style="vertical-align: middle;">(bodie)</td>
+      <td style="vertical-align: middle;">Sean Smith</td>
+      <td style="vertical-align: middle;">
+        <form action="https://stackmob.hipchat.com/admin/emoticons" method="post" style="display: inline;" onsubmit="return confirm('Are you sure you want to delete this emoticon? It will remain visible for users until their client is restarted.');"><input type="hidden" name="xsrf_token" value="c96900e58cd7df4a836948075dfd20a5cf2b8dd8"  /><input type="hidden" name="action" value="delete"><input type="hidden" name="id" value="6771"><input type="submit" id="go" name="go" value="Delete" class="warning" /></form>      </td>
+    </tr>
+      <tr>
+      <td style="vertical-align: middle;"><img src="https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/11115/fuckyousean-1344989837.jpg" width="25" height="25" /></td>
+      <td style="vertical-align: middle;">(fuckyousean)</td>
+      <td style="vertical-align: middle;">Ty Amell</td>
+      <td style="vertical-align: middle;">
+        <form action="https://stackmob.hipchat.com/admin/emoticons" method="post" style="display: inline;" onsubmit="return confirm('Are you sure you want to delete this emoticon? It will remain visible for users until their client is restarted.');"><input type="hidden" name="xsrf_token" value="c96900e58cd7df4a836948075dfd20a5cf2b8dd8"  /><input type="hidden" name="action" value="delete"><input type="hidden" name="id" value="6772"><input type="submit" id="go" name="go" value="Delete" class="warning" /></form>      </td>
+    </tr>
+      <tr>
+      <td style="vertical-align: middle;"><img src="https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/11115/mrburns-1344990365.png" width="22" height="25" /></td>
+      <td style="vertical-align: middle;">(mrburns)</td>
+      <td style="vertical-align: middle;">Sean Smith</td>
+      <td style="vertical-align: middle;">
+        <form action="https://stackmob.hipchat.com/admin/emoticons" method="post" style="display: inline;" onsubmit="return confirm('Are you sure you want to delete this emoticon? It will remain visible for users until their client is restarted.');"><input type="hidden" name="xsrf_token" value="c96900e58cd7df4a836948075dfd20a5cf2b8dd8"  /><input type="hidden" name="action" value="delete"><input type="hidden" name="id" value="6776"><input type="submit" id="go" name="go" value="Delete" class="warning" /></form>      </td>
+    </tr>
+      <tr>
+      <td style="vertical-align: middle;"><img src="https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/11115/yankees-1345246085.png" width="22" height="25" /></td>
+      <td style="vertical-align: middle;">(yankees)</td>
+      <td style="vertical-align: middle;">Sean Smith</td>
+      <td style="vertical-align: middle;">
+        <form action="https://stackmob.hipchat.com/admin/emoticons" method="post" style="display: inline;" onsubmit="return confirm('Are you sure you want to delete this emoticon? It will remain visible for users until their client is restarted.');"><input type="hidden" name="xsrf_token" value="c96900e58cd7df4a836948075dfd20a5cf2b8dd8"  /><input type="hidden" name="action" value="delete"><input type="hidden" name="id" value="7058"><input type="submit" id="go" name="go" value="Delete" class="warning" /></form>      </td>
+    </tr>
+      <tr>
+      <td style="vertical-align: middle;"><img src="https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/11115/giants-1345246318.png" width="30" height="16" /></td>
+      <td style="vertical-align: middle;">(giants)</td>
+      <td style="vertical-align: middle;">Sean Smith</td>
+      <td style="vertical-align: middle;">
+        <form action="https://stackmob.hipchat.com/admin/emoticons" method="post" style="display: inline;" onsubmit="return confirm('Are you sure you want to delete this emoticon? It will remain visible for users until their client is restarted.');"><input type="hidden" name="xsrf_token" value="c96900e58cd7df4a836948075dfd20a5cf2b8dd8"  /><input type="hidden" name="action" value="delete"><input type="hidden" name="id" value="7059"><input type="submit" id="go" name="go" value="Delete" class="warning" /></form>      </td>
+    </tr>
+      <tr>
+      <td style="vertical-align: middle;"><img src="https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/11115/parrot-1345489394.gif" width="30" height="21" /></td>
+      <td style="vertical-align: middle;">(parrot)</td>
+      <td style="vertical-align: middle;">Sean Smith</td>
+      <td style="vertical-align: middle;">
+        <form action="https://stackmob.hipchat.com/admin/emoticons" method="post" style="display: inline;" onsubmit="return confirm('Are you sure you want to delete this emoticon? It will remain visible for users until their client is restarted.');"><input type="hidden" name="xsrf_token" value="c96900e58cd7df4a836948075dfd20a5cf2b8dd8"  /><input type="hidden" name="action" value="delete"><input type="hidden" name="id" value="7091"><input type="submit" id="go" name="go" value="Delete" class="warning" /></form>      </td>
+    </tr>
+      <tr>
+      <td style="vertical-align: middle;"><img src="https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/11115/kodi-1345586007.JPG" width="27" height="25" /></td>
+      <td style="vertical-align: middle;">(kodi)</td>
+      <td style="vertical-align: middle;">Sean Smith</td>
+      <td style="vertical-align: middle;">
+        <form action="https://stackmob.hipchat.com/admin/emoticons" method="post" style="display: inline;" onsubmit="return confirm('Are you sure you want to delete this emoticon? It will remain visible for users until their client is restarted.');"><input type="hidden" name="xsrf_token" value="c96900e58cd7df4a836948075dfd20a5cf2b8dd8"  /><input type="hidden" name="action" value="delete"><input type="hidden" name="id" value="7160"><input type="submit" id="go" name="go" value="Delete" class="warning" /></form>      </td>
+    </tr>
+      <tr>
+      <td style="vertical-align: middle;"><img src="https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/11115/archer-1345663346.png" width="30" height="24" /></td>
+      <td style="vertical-align: middle;">(archer)</td>
+      <td style="vertical-align: middle;">Sean Smith</td>
+      <td style="vertical-align: middle;">
+        <form action="https://stackmob.hipchat.com/admin/emoticons" method="post" style="display: inline;" onsubmit="return confirm('Are you sure you want to delete this emoticon? It will remain visible for users until their client is restarted.');"><input type="hidden" name="xsrf_token" value="c96900e58cd7df4a836948075dfd20a5cf2b8dd8"  /><input type="hidden" name="action" value="delete"><input type="hidden" name="id" value="7185"><input type="submit" id="go" name="go" value="Delete" class="warning" /></form>      </td>
+    </tr>
+      <tr>
+      <td style="vertical-align: middle;"><img src="https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/11115/fuckyouty-1345663832.jpg" width="29" height="25" /></td>
+      <td style="vertical-align: middle;">(fuckyouty)</td>
+      <td style="vertical-align: middle;">Sean Smith</td>
+      <td style="vertical-align: middle;">
+        <form action="https://stackmob.hipchat.com/admin/emoticons" method="post" style="display: inline;" onsubmit="return confirm('Are you sure you want to delete this emoticon? It will remain visible for users until their client is restarted.');"><input type="hidden" name="xsrf_token" value="c96900e58cd7df4a836948075dfd20a5cf2b8dd8"  /><input type="hidden" name="action" value="delete"><input type="hidden" name="id" value="7187"><input type="submit" id="go" name="go" value="Delete" class="warning" /></form>      </td>
+    </tr>
+      <tr>
+      <td style="vertical-align: middle;"><img src="https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/11115/cowboycoder-1347325258.jpg" width="28" height="25" /></td>
+      <td style="vertical-align: middle;">(cowboycoder)</td>
+      <td style="vertical-align: middle;">Sean Smith</td>
+      <td style="vertical-align: middle;">
+        <form action="https://stackmob.hipchat.com/admin/emoticons" method="post" style="display: inline;" onsubmit="return confirm('Are you sure you want to delete this emoticon? It will remain visible for users until their client is restarted.');"><input type="hidden" name="xsrf_token" value="c96900e58cd7df4a836948075dfd20a5cf2b8dd8"  /><input type="hidden" name="action" value="delete"><input type="hidden" name="id" value="7973"><input type="submit" id="go" name="go" value="Delete" class="warning" /></form>      </td>
+    </tr>
+      <tr>
+      <td style="vertical-align: middle;"><img src="https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/11115/orioles-1347580092.png" width="27" height="25" /></td>
+      <td style="vertical-align: middle;">(orioles)</td>
+      <td style="vertical-align: middle;">Kumi Walker</td>
+      <td style="vertical-align: middle;">
+        <form action="https://stackmob.hipchat.com/admin/emoticons" method="post" style="display: inline;" onsubmit="return confirm('Are you sure you want to delete this emoticon? It will remain visible for users until their client is restarted.');"><input type="hidden" name="xsrf_token" value="c96900e58cd7df4a836948075dfd20a5cf2b8dd8"  /><input type="hidden" name="action" value="delete"><input type="hidden" name="id" value="8147"><input type="submit" id="go" name="go" value="Delete" class="warning" /></form>      </td>
+    </tr>
+      <tr>
+      <td style="vertical-align: middle;"><img src="https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/11115/athletics-1347662100.jpg" width="24" height="25" /></td>
+      <td style="vertical-align: middle;">(athletics)</td>
+      <td style="vertical-align: middle;">Sean Smith</td>
+      <td style="vertical-align: middle;">
+        <form action="https://stackmob.hipchat.com/admin/emoticons" method="post" style="display: inline;" onsubmit="return confirm('Are you sure you want to delete this emoticon? It will remain visible for users until their client is restarted.');"><input type="hidden" name="xsrf_token" value="c96900e58cd7df4a836948075dfd20a5cf2b8dd8"  /><input type="hidden" name="action" value="delete"><input type="hidden" name="id" value="8272"><input type="submit" id="go" name="go" value="Delete" class="warning" /></form>      </td>
+    </tr>
+      <tr>
+      <td style="vertical-align: middle;"><img src="https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/11115/america-1348004300.gif" width="30" height="15" /></td>
+      <td style="vertical-align: middle;">(america)</td>
+      <td style="vertical-align: middle;">Sean Smith</td>
+      <td style="vertical-align: middle;">
+        <form action="https://stackmob.hipchat.com/admin/emoticons" method="post" style="display: inline;" onsubmit="return confirm('Are you sure you want to delete this emoticon? It will remain visible for users until their client is restarted.');"><input type="hidden" name="xsrf_token" value="c96900e58cd7df4a836948075dfd20a5cf2b8dd8"  /><input type="hidden" name="action" value="delete"><input type="hidden" name="id" value="8364"><input type="submit" id="go" name="go" value="Delete" class="warning" /></form>      </td>
+    </tr>
+      <tr>
+      <td style="vertical-align: middle;"><img src="https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/11115/bears-1348004562.png" width="30" height="24" /></td>
+      <td style="vertical-align: middle;">(bears)</td>
+      <td style="vertical-align: middle;">Sean Smith</td>
+      <td style="vertical-align: middle;">
+        <form action="https://stackmob.hipchat.com/admin/emoticons" method="post" style="display: inline;" onsubmit="return confirm('Are you sure you want to delete this emoticon? It will remain visible for users until their client is restarted.');"><input type="hidden" name="xsrf_token" value="c96900e58cd7df4a836948075dfd20a5cf2b8dd8"  /><input type="hidden" name="action" value="delete"><input type="hidden" name="id" value="8366"><input type="submit" id="go" name="go" value="Delete" class="warning" /></form>      </td>
+    </tr>
+      <tr>
+      <td style="vertical-align: middle;"><img src="https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/11115/erick-1348005273.jpg" width="30" height="25" /></td>
+      <td style="vertical-align: middle;">(erick)</td>
+      <td style="vertical-align: middle;">Sean Smith</td>
+      <td style="vertical-align: middle;">
+        <form action="https://stackmob.hipchat.com/admin/emoticons" method="post" style="display: inline;" onsubmit="return confirm('Are you sure you want to delete this emoticon? It will remain visible for users until their client is restarted.');"><input type="hidden" name="xsrf_token" value="c96900e58cd7df4a836948075dfd20a5cf2b8dd8"  /><input type="hidden" name="action" value="delete"><input type="hidden" name="id" value="8368"><input type="submit" id="go" name="go" value="Delete" class="warning" /></form>      </td>
+    </tr>
+      <tr>
+      <td style="vertical-align: middle;"><img src="https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/11115/missy-1348090189.jpg" width="25" height="25" /></td>
+      <td style="vertical-align: middle;">(missy)</td>
+      <td style="vertical-align: middle;">Kumi Walker</td>
+      <td style="vertical-align: middle;">
+        <form action="https://stackmob.hipchat.com/admin/emoticons" method="post" style="display: inline;" onsubmit="return confirm('Are you sure you want to delete this emoticon? It will remain visible for users until their client is restarted.');"><input type="hidden" name="xsrf_token" value="c96900e58cd7df4a836948075dfd20a5cf2b8dd8"  /><input type="hidden" name="action" value="delete"><input type="hidden" name="id" value="8421"><input type="submit" id="go" name="go" value="Delete" class="warning" /></form>      </td>
+    </tr>
+      <tr>
+      <td style="vertical-align: middle;"><img src="https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/11115/brown-1348105468.gif" width="18" height="25" /></td>
+      <td style="vertical-align: middle;">(brown)</td>
+      <td style="vertical-align: middle;">Kumi Walker</td>
+      <td style="vertical-align: middle;">
+        <form action="https://stackmob.hipchat.com/admin/emoticons" method="post" style="display: inline;" onsubmit="return confirm('Are you sure you want to delete this emoticon? It will remain visible for users until their client is restarted.');"><input type="hidden" name="xsrf_token" value="c96900e58cd7df4a836948075dfd20a5cf2b8dd8"  /><input type="hidden" name="action" value="delete"><input type="hidden" name="id" value="8427"><input type="submit" id="go" name="go" value="Delete" class="warning" /></form>      </td>
+    </tr>
+      <tr>
+      <td style="vertical-align: middle;"><img src="https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/11115/chocolaterain-1348613773.png" width="16" height="25" /></td>
+      <td style="vertical-align: middle;">(chocolaterain)</td>
+      <td style="vertical-align: middle;">Kumi Walker</td>
+      <td style="vertical-align: middle;">
+        <form action="https://stackmob.hipchat.com/admin/emoticons" method="post" style="display: inline;" onsubmit="return confirm('Are you sure you want to delete this emoticon? It will remain visible for users until their client is restarted.');"><input type="hidden" name="xsrf_token" value="c96900e58cd7df4a836948075dfd20a5cf2b8dd8"  /><input type="hidden" name="action" value="delete"><input type="hidden" name="id" value="8652"><input type="submit" id="go" name="go" value="Delete" class="warning" /></form>      </td>
+    </tr>
+      <tr>
+      <td style="vertical-align: middle;"><img src="https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/11115/jordanwest-1348620626.jpg" width="28" height="25" /></td>
+      <td style="vertical-align: middle;">(jordanwest)</td>
+      <td style="vertical-align: middle;">Sean Smith</td>
+      <td style="vertical-align: middle;">
+        <form action="https://stackmob.hipchat.com/admin/emoticons" method="post" style="display: inline;" onsubmit="return confirm('Are you sure you want to delete this emoticon? It will remain visible for users until their client is restarted.');"><input type="hidden" name="xsrf_token" value="c96900e58cd7df4a836948075dfd20a5cf2b8dd8"  /><input type="hidden" name="action" value="delete"><input type="hidden" name="id" value="8657"><input type="submit" id="go" name="go" value="Delete" class="warning" /></form>      </td>
+    </tr>
+    </table>
+    </div>
+  </div>
+</div>
+
+      <div id="footer">
+        <div class="content">
+          <div class="innerContent">
+            <p class="links">
+                                        <a href="/about">About Us</a>
+              <a href="/press">Press</a>
+              <a href="/jobs">Jobs</a>
+              <a href="/help">Help</a>
+              <a href="/docs/api">API</a>
+              <a href="http://status.hipchat.com">Status</a>
+              <a href="/contact">Contact</a>
+              <a href="/privacy">Privacy</a>
+              <a href="/terms">Terms</a>
+              <a href="http://blog.hipchat.com" class="blog" target="_blank"><span>Blog</span></a>
+              <a href="http://twitter.com/hipchat" class="twitter" target="_blank"><span>Follow Us</span></a>
+                                      </p>
+            <p class="copy">&copy; 2012 Atlassian</p>
+          </div>
+        </div>
+
+        
+      </div>
+    </div>
+
+    <script src="/min/?b=js&amp;f=default.js,groups.js&amp;15f84ce60" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" charset="utf-8">
+      $(function() {
+        $(document).trigger('hipchat.load');
+      });
+    </script>
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-8544996-1']);
+      _gaq.push(['_trackPageview']);
+      _gaq.push(['_trackPageLoadTime']);
+      _gaq.push(['_setDomainName', 'hipchat.com']);
+            (function() {
+        var ga = document.createElement('script');
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        ga.setAttribute('async', 'true');
+        document.documentElement.firstChild.appendChild(ga);
+      })();
+          </script>
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
+
