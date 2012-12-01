@@ -1,4 +1,3 @@
-/**
  * Copyright 2012 StackMob
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -42,7 +41,7 @@ public class HelloWorld implements CustomCodeMethod {
   @Override
   public ResponseToProcess execute(ProcessedAPIRequest request, SDKServiceProvider serviceProvider) {
     Map<String, Object> map = new HashMap<String, Object>();
-    map.put("msg", "Hello, world, java example, 4:20pm");
+    map.put("msg", "Hello, world, java example, 2:11pm");
     return new ResponseToProcess(HttpURLConnection.HTTP_OK, map);
   }
 
