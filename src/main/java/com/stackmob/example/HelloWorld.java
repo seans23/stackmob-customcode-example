@@ -30,7 +30,7 @@ public class HelloWorld implements CustomCodeMethod {
 
   @Override
   public String getMethodName() {
-    return "hello_world";
+    return "hello_world october 1 2013";
   }
 
   @Override
