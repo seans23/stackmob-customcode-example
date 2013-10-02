@@ -30,7 +30,7 @@ public class HelloWorld implements CustomCodeMethod {
 
   @Override
   public String getMethodName() {
-    return "hello_world october 1 2013";
+    return "hello_world";
   }
 
   @Override
@@ -41,7 +41,7 @@ public class HelloWorld implements CustomCodeMethod {
   @Override
   public ResponseToProcess execute(ProcessedAPIRequest request, SDKServiceProvider serviceProvider) {
     Map<String, Object> map = new HashMap<String, Object>();
-    map.put("msg", "Hello, world, java example, 9:21am");
+    map.put("msg", "Hello, world, java example, October 2 12pm");
     return new ResponseToProcess(HttpURLConnection.HTTP_OK, map);
   }
 
